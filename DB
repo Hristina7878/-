@@ -1,0 +1,82 @@
+(venv) C:\Users\User\Desktop\mysite\Networker>python manage.py migrate
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\backe
+nds\postgresql\base.py", line 25, in <module>
+    import psycopg2 as Database
+ModuleNotFoundError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\mysite\Networker\manage.py", line 22, in <mod
+ule>
+    main()
+  File "C:\Users\User\Desktop\mysite\Networker\manage.py", line 18, in main
+
+    execute_from_command_line(sys.argv)
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\core\man
+agement\__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\core\man
+agement\__init__.py", line 395, in execute
+    django.setup()
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\__init__
+.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\apps\reg
+istry.py", line 114, in populate
+    app_config.import_models()
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\apps\con
+fig.py", line 301, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.
+9.2032.0_x64__qbz5n2kfra8p0\lib\importlib\__init__.py", line 127, in import
+_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocke
+d
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_remo
+ved
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\contrib\
+auth\models.py", line 3, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserMan
+ager
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\contrib\
+auth\base_user.py", line 48, in <module>
+    class AbstractBaseUser(models.Model):
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\model
+s\base.py", line 122, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\model
+s\base.py", line 326, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\model
+s\options.py", line 207, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_le
+ngth())
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\utils\co
+nnection.py", line 15, in __getattr__
+    return getattr(self._connections[self._alias], item)
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\utils\co
+nnection.py", line 62, in __getitem__
+    conn = self.create_connection(alias)
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\utils
+.py", line 204, in create_connection
+    backend = load_backend(db['ENGINE'])
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\utils
+.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.
+9.2032.0_x64__qbz5n2kfra8p0\lib\importlib\__init__.py", line 127, in import
+_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "C:\Users\User\Desktop\mysite\venv\lib\site-packages\django\db\backe
+nds\postgresql\base.py", line 29, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module:
+ No module named 'psycopg2'                   django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module:
+ No module named 'psycopg2'
